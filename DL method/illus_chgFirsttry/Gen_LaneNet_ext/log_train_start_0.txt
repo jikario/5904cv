@@ -1,0 +1,1601 @@
+========================================
+Args:Namespace(K=array([[2.015e+03, 0.000e+00, 9.600e+02],
+       [0.000e+00, 2.015e+03, 5.400e+02],
+       [0.000e+00, 0.000e+00, 1.000e+00]]), anchor_y_steps=array([  5,  10,  15,  20,  30,  40,  50,  60,  80, 100]), batch_norm=True, batch_size=8, cam_height=1.55, channels_in=3, clip_grad_norm=0, crop_y=0, cudnn=True, data_dir='/kaggle/input/apollodatasplits/data_splits/illus_chg', dataset_dir='/kaggle/input/apollo/Apollo_Sim_3D_Lane_Release', dataset_name='illus_chg', evaluate=False, fix_cam=False, flip_on=False, ipm_h=208, ipm_w=128, learning_rate=0.0005, list=[954, 2789], lr_decay=False, lr_decay_iters=30, lr_policy=None, mod='Gen_LaneNet_ext', nepochs=50, niter=50, niter_decay=400, no_3d=False, no_centerline=False, no_cuda=False, no_dropout=False, no_tb=False, num_class=2, num_y_steps=10, nworkers=0, optimizer='adam', org_h=1080, org_w=1920, pitch=3, pred_cam=False, pretrain_epochs=20, pretrained=False, pretrained_feat_model='pretrained/erfnet_model_sim3d.tar', print_freq=50, prob_th=0.5, resize_h=360, resize_w=480, resume='', save_freq=50, save_path='/kaggle/working/illus_chgFirsttry/Gen_LaneNet_ext', start_epoch=0, test_mode=False, top_view_region=array([[-10, 103],
+       [ 10, 103],
+       [-10,   3],
+       [ 10,   3]]), vgg_mean=[0.485, 0.456, 0.406], vgg_std=[0.229, 0.224, 0.225], weight_decay=0, weight_init='normal', y_ref=5)
+========================================
+Init model: 'Gen_LaneNet_ext'
+Number of parameters in model Gen_LaneNet_ext is 0.770M
+
+ => Start train set for EPOCH 1
+Epoch: [1][50/496]	Time 1.381 (1.508)	Loss 600.38073730 (741.00360107)
+Epoch: [1][100/496]	Time 1.361 (1.456)	Loss 537.10955811 (593.21487457)
+Epoch: [1][150/496]	Time 1.372 (1.440)	Loss 254.99224854 (525.52662242)
+Epoch: [1][200/496]	Time 1.332 (1.431)	Loss 409.11840820 (486.75441353)
+Epoch: [1][250/496]	Time 1.349 (1.422)	Loss 516.25561523 (463.70739783)
+Epoch: [1][300/496]	Time 1.468 (1.421)	Loss 303.38958740 (431.41512604)
+Epoch: [1][350/496]	Time 1.386 (1.421)	Loss 218.13385010 (412.22697532)
+Epoch: [1][400/496]	Time 1.463 (1.420)	Loss 252.00256348 (395.12259399)
+Epoch: [1][450/496]	Time 1.359 (1.419)	Loss 285.65917969 (380.67552636)
+Test: [50/59]	Loss 198.42080688 (283.23757446)
+===> Average loss_gflat-loss on training set is 370.14340976
+===> Average loss_gflat-loss on validation set is 294.02472570
+===> Evaluation laneline F-measure: 0.627846
+===> Evaluation laneline Recall: 0.629279
+===> Evaluation laneline Precision: 0.626420
+===> Evaluation centerline F-measure: 0.640947
+===> Evaluation centerline Recall: 0.660805
+===> Evaluation centerline Precision: 0.622248
+===> Last best loss_gflat-loss was inf in epoch 0
+Best model copied
+
+ => Start train set for EPOCH 2
+Epoch: [2][50/496]	Time 1.263 (1.279)	Loss 198.29318237 (240.49143250)
+Epoch: [2][100/496]	Time 1.263 (1.292)	Loss 328.75729370 (239.21370689)
+Epoch: [2][150/496]	Time 1.250 (1.297)	Loss 276.33917236 (240.66362691)
+Epoch: [2][200/496]	Time 1.219 (1.298)	Loss 152.45379639 (242.77721733)
+Epoch: [2][250/496]	Time 1.257 (1.299)	Loss 386.86727905 (239.56878513)
+Epoch: [2][300/496]	Time 1.314 (1.300)	Loss 184.39472961 (236.31366796)
+Epoch: [2][350/496]	Time 1.270 (1.300)	Loss 137.23693848 (240.97449655)
+Epoch: [2][400/496]	Time 1.251 (1.301)	Loss 262.29284668 (239.20129658)
+Epoch: [2][450/496]	Time 1.246 (1.301)	Loss 164.47879028 (237.51840732)
+Test: [50/59]	Loss 210.18702698 (228.17251099)
+===> Average loss_gflat-loss on training set is 235.09710104
+===> Average loss_gflat-loss on validation set is 224.72667319
+===> Evaluation laneline F-measure: 0.753963
+===> Evaluation laneline Recall: 0.733333
+===> Evaluation laneline Precision: 0.775789
+===> Evaluation centerline F-measure: 0.789081
+===> Evaluation centerline Recall: 0.788996
+===> Evaluation centerline Precision: 0.789167
+===> Last best loss_gflat-loss was 370.14340976 in epoch 1
+Best model copied
+
+ => Start train set for EPOCH 3
+Epoch: [3][50/496]	Time 1.254 (1.297)	Loss 131.58451843 (217.22956284)
+Epoch: [3][100/496]	Time 1.580 (1.314)	Loss 196.39202881 (211.31256783)
+Epoch: [3][150/496]	Time 1.267 (1.317)	Loss 306.41409302 (211.83461609)
+Epoch: [3][200/496]	Time 1.251 (1.319)	Loss 124.95954895 (208.38517941)
+Epoch: [3][250/496]	Time 1.234 (1.320)	Loss 188.25675964 (207.87263675)
+Epoch: [3][300/496]	Time 1.273 (1.322)	Loss 217.77265930 (207.98469709)
+Epoch: [3][350/496]	Time 1.267 (1.323)	Loss 215.99565125 (207.01154129)
+Epoch: [3][400/496]	Time 1.322 (1.324)	Loss 183.19441223 (206.29530079)
+Epoch: [3][450/496]	Time 1.256 (1.325)	Loss 130.37472534 (205.63043942)
+Test: [50/59]	Loss 122.33636475 (200.66816376)
+===> Average loss_gflat-loss on training set is 204.88991264
+===> Average loss_gflat-loss on validation set is 198.38648832
+===> Evaluation laneline F-measure: 0.724823
+===> Evaluation laneline Recall: 0.738739
+===> Evaluation laneline Precision: 0.711422
+===> Evaluation centerline F-measure: 0.770237
+===> Evaluation centerline Recall: 0.798071
+===> Evaluation centerline Precision: 0.744279
+===> Last best loss_gflat-loss was 235.09710104 in epoch 2
+Best model copied
+
+ => Start train set for EPOCH 4
+Epoch: [4][50/496]	Time 1.341 (1.296)	Loss 130.66784668 (185.58516052)
+Epoch: [4][100/496]	Time 1.275 (1.305)	Loss 178.00973511 (190.28244400)
+Epoch: [4][150/496]	Time 1.272 (1.310)	Loss 143.45762634 (192.82230947)
+Epoch: [4][200/496]	Time 1.227 (1.312)	Loss 192.47132874 (193.14164921)
+Epoch: [4][250/496]	Time 1.341 (1.315)	Loss 215.55148315 (190.39684860)
+Epoch: [4][300/496]	Time 1.331 (1.316)	Loss 130.39668274 (189.53578346)
+Epoch: [4][350/496]	Time 1.327 (1.318)	Loss 189.57571411 (186.89725207)
+Epoch: [4][400/496]	Time 1.337 (1.319)	Loss 143.30664062 (186.83409636)
+Epoch: [4][450/496]	Time 1.299 (1.320)	Loss 133.93054199 (185.51980849)
+Test: [50/59]	Loss 138.14445496 (192.01057312)
+===> Average loss_gflat-loss on training set is 184.83866101
+===> Average loss_gflat-loss on validation set is 189.17822654
+===> Evaluation laneline F-measure: 0.764946
+===> Evaluation laneline Recall: 0.794144
+===> Evaluation laneline Precision: 0.737819
+===> Evaluation centerline F-measure: 0.787164
+===> Evaluation centerline Recall: 0.820760
+===> Evaluation centerline Precision: 0.756210
+===> Last best loss_gflat-loss was 204.88991264 in epoch 3
+Best model copied
+
+ => Start train set for EPOCH 5
+Epoch: [5][50/496]	Time 1.292 (1.288)	Loss 154.46340942 (173.64071396)
+Epoch: [5][100/496]	Time 1.293 (1.308)	Loss 128.21087646 (178.90387413)
+Epoch: [5][150/496]	Time 1.538 (1.318)	Loss 172.78099060 (177.69831629)
+Epoch: [5][200/496]	Time 1.265 (1.317)	Loss 130.26167297 (172.40870831)
+Epoch: [5][250/496]	Time 1.248 (1.317)	Loss 139.10028076 (174.12353680)
+Epoch: [5][300/496]	Time 1.270 (1.318)	Loss 132.64187622 (172.51539337)
+Epoch: [5][350/496]	Time 1.299 (1.319)	Loss 105.73806763 (172.11554624)
+Epoch: [5][400/496]	Time 1.301 (1.319)	Loss 158.54425049 (172.04724829)
+Epoch: [5][450/496]	Time 1.238 (1.321)	Loss 163.86094666 (172.28970222)
+Test: [50/59]	Loss 123.92597961 (180.76205017)
+===> Average loss_gflat-loss on training set is 172.12372278
+===> Average loss_gflat-loss on validation set is 182.65208306
+===> Evaluation laneline F-measure: 0.711261
+===> Evaluation laneline Recall: 0.739189
+===> Evaluation laneline Precision: 0.685367
+===> Evaluation centerline F-measure: 0.759887
+===> Evaluation centerline Recall: 0.804311
+===> Evaluation centerline Precision: 0.720115
+===> Last best loss_gflat-loss was 184.83866101 in epoch 4
+Best model copied
+
+ => Start train set for EPOCH 6
+Epoch: [6][50/496]	Time 1.358 (1.302)	Loss 103.44979095 (164.23945389)
+Epoch: [6][100/496]	Time 1.331 (1.315)	Loss 87.92848969 (167.77306305)
+Epoch: [6][150/496]	Time 1.378 (1.320)	Loss 77.05884552 (165.94378225)
+Epoch: [6][200/496]	Time 1.312 (1.317)	Loss 117.41722107 (163.67438637)
+Epoch: [6][250/496]	Time 1.265 (1.315)	Loss 159.95706177 (163.12544165)
+Epoch: [6][300/496]	Time 1.321 (1.317)	Loss 231.11486816 (165.18421323)
+Epoch: [6][350/496]	Time 1.350 (1.318)	Loss 94.55521393 (165.34351501)
+Epoch: [6][400/496]	Time 1.241 (1.317)	Loss 246.67810059 (165.01113880)
+Epoch: [6][450/496]	Time 1.229 (1.315)	Loss 208.11581421 (163.80430778)
+Test: [50/59]	Loss 150.59664917 (169.82319855)
+===> Average loss_gflat-loss on training set is 164.60573299
+===> Average loss_gflat-loss on validation set is 166.07491897
+===> Evaluation laneline F-measure: 0.778575
+===> Evaluation laneline Recall: 0.821622
+===> Evaluation laneline Precision: 0.739815
+===> Evaluation centerline F-measure: 0.824143
+===> Evaluation centerline Recall: 0.873511
+===> Evaluation centerline Precision: 0.780057
+===> Last best loss_gflat-loss was 172.12372278 in epoch 5
+Best model copied
+
+ => Start train set for EPOCH 7
+Epoch: [7][50/496]	Time 1.220 (1.288)	Loss 112.81822968 (155.52881989)
+Epoch: [7][100/496]	Time 1.247 (1.301)	Loss 182.72372437 (153.37121330)
+Epoch: [7][150/496]	Time 1.281 (1.319)	Loss 151.52113342 (154.15389699)
+Epoch: [7][200/496]	Time 1.209 (1.323)	Loss 182.80632019 (153.52828138)
+Epoch: [7][250/496]	Time 1.272 (1.322)	Loss 190.41386414 (155.06494542)
+Epoch: [7][300/496]	Time 1.492 (1.323)	Loss 90.51747131 (153.62890903)
+Epoch: [7][350/496]	Time 1.254 (1.323)	Loss 129.24165344 (153.10452795)
+Epoch: [7][400/496]	Time 1.247 (1.323)	Loss 168.29811096 (153.45756127)
+Epoch: [7][450/496]	Time 1.235 (1.322)	Loss 138.32904053 (152.74430497)
+Test: [50/59]	Loss 304.32327271 (163.19799255)
+===> Average loss_gflat-loss on training set is 152.67334407
+===> Average loss_gflat-loss on validation set is 160.30088056
+===> Evaluation laneline F-measure: 0.788464
+===> Evaluation laneline Recall: 0.813964
+===> Evaluation laneline Precision: 0.764515
+===> Evaluation centerline F-measure: 0.826425
+===> Evaluation centerline Recall: 0.856495
+===> Evaluation centerline Precision: 0.798396
+===> Last best loss_gflat-loss was 164.60573299 in epoch 6
+Best model copied
+
+ => Start train set for EPOCH 8
+Epoch: [8][50/496]	Time 1.374 (1.298)	Loss 138.03456116 (145.58514679)
+Epoch: [8][100/496]	Time 1.364 (1.312)	Loss 141.92463684 (146.64384254)
+Epoch: [8][150/496]	Time 1.369 (1.319)	Loss 77.02775574 (144.56422785)
+Epoch: [8][200/496]	Time 1.282 (1.323)	Loss 128.24157715 (146.16141979)
+Epoch: [8][250/496]	Time 1.288 (1.325)	Loss 142.06324768 (148.92474121)
+Epoch: [8][300/496]	Time 1.274 (1.326)	Loss 144.05531311 (149.65361918)
+Epoch: [8][350/496]	Time 1.277 (1.326)	Loss 123.42224121 (148.98238462)
+Epoch: [8][400/496]	Time 1.295 (1.327)	Loss 167.84384155 (149.94298889)
+Epoch: [8][450/496]	Time 1.289 (1.327)	Loss 166.07402039 (147.97833732)
+Test: [50/59]	Loss 246.49339294 (165.19616257)
+===> Average loss_gflat-loss on training set is 148.43439419
+===> Average loss_gflat-loss on validation set is 158.10470051
+===> Evaluation laneline F-measure: 0.804632
+===> Evaluation laneline Recall: 0.836486
+===> Evaluation laneline Precision: 0.775115
+===> Evaluation centerline F-measure: 0.838520
+===> Evaluation centerline Recall: 0.875213
+===> Evaluation centerline Precision: 0.804781
+===> Last best loss_gflat-loss was 152.67334407 in epoch 7
+Best model copied
+
+ => Start train set for EPOCH 9
+Epoch: [9][50/496]	Time 1.303 (1.300)	Loss 128.49185181 (155.44153259)
+Epoch: [9][100/496]	Time 1.260 (1.313)	Loss 235.13475037 (150.89259933)
+Epoch: [9][150/496]	Time 1.291 (1.317)	Loss 120.69537354 (148.14365102)
+Epoch: [9][200/496]	Time 1.260 (1.319)	Loss 128.19575500 (148.26604130)
+Epoch: [9][250/496]	Time 1.588 (1.321)	Loss 139.88433838 (147.18800940)
+Epoch: [9][300/496]	Time 1.388 (1.324)	Loss 147.54904175 (145.78252197)
+Epoch: [9][350/496]	Time 1.320 (1.325)	Loss 546.53240967 (147.04647975)
+Epoch: [9][400/496]	Time 1.333 (1.324)	Loss 124.58987427 (146.11760836)
+Epoch: [9][450/496]	Time 1.310 (1.325)	Loss 99.67132568 (144.31933782)
+Test: [50/59]	Loss 136.57998657 (159.03713852)
+===> Average loss_gflat-loss on training set is 143.70298862
+===> Average loss_gflat-loss on validation set is 160.18238779
+===> Evaluation laneline F-measure: 0.782950
+===> Evaluation laneline Recall: 0.813063
+===> Evaluation laneline Precision: 0.754988
+===> Evaluation centerline F-measure: 0.823002
+===> Evaluation centerline Recall: 0.855360
+===> Evaluation centerline Precision: 0.793005
+===> Last best loss_gflat-loss was 148.43439419 in epoch 8
+Best model copied
+
+ => Start train set for EPOCH 10
+Epoch: [10][50/496]	Time 1.264 (1.308)	Loss 176.33551025 (136.29144150)
+Epoch: [10][100/496]	Time 1.290 (1.318)	Loss 217.33676147 (138.16317459)
+Epoch: [10][150/496]	Time 1.236 (1.318)	Loss 145.51632690 (138.04769506)
+Epoch: [10][200/496]	Time 1.280 (1.320)	Loss 314.51339722 (138.81870876)
+Epoch: [10][250/496]	Time 1.291 (1.322)	Loss 72.84043884 (139.42873169)
+Epoch: [10][300/496]	Time 1.238 (1.323)	Loss 157.20875549 (140.10251722)
+Epoch: [10][350/496]	Time 1.287 (1.325)	Loss 134.94088745 (140.67268175)
+Epoch: [10][400/496]	Time 1.265 (1.326)	Loss 123.87439728 (139.97172045)
+Epoch: [10][450/496]	Time 1.289 (1.326)	Loss 77.50818634 (139.78567130)
+Test: [50/59]	Loss 80.65873718 (153.98469803)
+===> Average loss_gflat-loss on training set is 139.25293261
+===> Average loss_gflat-loss on validation set is 145.72083011
+===> Evaluation laneline F-measure: 0.816626
+===> Evaluation laneline Recall: 0.852252
+===> Evaluation laneline Precision: 0.783859
+===> Evaluation centerline F-measure: 0.845566
+===> Evaluation centerline Recall: 0.893364
+===> Evaluation centerline Precision: 0.802624
+===> Last best loss_gflat-loss was 143.70298862 in epoch 9
+Best model copied
+
+ => Start train set for EPOCH 11
+Epoch: [11][50/496]	Time 1.240 (1.298)	Loss 193.06985474 (119.47762238)
+Epoch: [11][100/496]	Time 1.274 (1.314)	Loss 142.28213501 (125.76122932)
+Epoch: [11][150/496]	Time 1.265 (1.320)	Loss 270.01962280 (129.70543905)
+Epoch: [11][200/496]	Time 1.568 (1.325)	Loss 110.30784607 (132.64659668)
+Epoch: [11][250/496]	Time 1.275 (1.326)	Loss 170.63545227 (132.58595757)
+Epoch: [11][300/496]	Time 1.288 (1.326)	Loss 156.10527039 (133.02125228)
+Epoch: [11][350/496]	Time 1.311 (1.328)	Loss 130.11596680 (134.42998918)
+Epoch: [11][400/496]	Time 1.296 (1.329)	Loss 79.82070923 (133.32641850)
+Epoch: [11][450/496]	Time 1.367 (1.330)	Loss 102.16661072 (134.05011065)
+Test: [50/59]	Loss 338.52957153 (148.50437958)
+===> Average loss_gflat-loss on training set is 133.66273925
+===> Average loss_gflat-loss on validation set is 146.15432623
+===> Evaluation laneline F-measure: 0.803153
+===> Evaluation laneline Recall: 0.826126
+===> Evaluation laneline Precision: 0.781423
+===> Evaluation centerline F-measure: 0.843508
+===> Evaluation centerline Recall: 0.886557
+===> Evaluation centerline Precision: 0.804447
+===> Last best loss_gflat-loss was 139.25293261 in epoch 10
+Best model copied
+
+ => Start train set for EPOCH 12
+Epoch: [12][50/496]	Time 1.255 (1.294)	Loss 75.39265442 (143.19655716)
+Epoch: [12][100/496]	Time 1.300 (1.310)	Loss 86.41414642 (143.59252106)
+Epoch: [12][150/496]	Time 1.255 (1.316)	Loss 197.88322449 (139.41707408)
+Epoch: [12][200/496]	Time 1.284 (1.320)	Loss 104.00376892 (136.15836115)
+Epoch: [12][250/496]	Time 1.307 (1.323)	Loss 85.50741577 (135.88744807)
+Epoch: [12][300/496]	Time 1.267 (1.326)	Loss 133.18128967 (134.83122538)
+Epoch: [12][350/496]	Time 1.275 (1.326)	Loss 73.26448059 (134.20556968)
+Epoch: [12][400/496]	Time 1.274 (1.326)	Loss 126.21423340 (133.95384569)
+Epoch: [12][450/496]	Time 1.355 (1.327)	Loss 116.82157135 (132.29162665)
+Test: [50/59]	Loss 84.58149719 (145.65604813)
+===> Average loss_gflat-loss on training set is 130.32310990
+===> Average loss_gflat-loss on validation set is 149.17305394
+===> Evaluation laneline F-measure: 0.806745
+===> Evaluation laneline Recall: 0.833333
+===> Evaluation laneline Precision: 0.781801
+===> Evaluation centerline F-measure: 0.841815
+===> Evaluation centerline Recall: 0.880885
+===> Evaluation centerline Precision: 0.806064
+===> Last best loss_gflat-loss was 133.66273925 in epoch 11
+Best model copied
+
+ => Start train set for EPOCH 13
+Epoch: [13][50/496]	Time 1.373 (1.303)	Loss 223.15734863 (126.88554771)
+Epoch: [13][100/496]	Time 1.272 (1.320)	Loss 154.32962036 (127.59552071)
+Epoch: [13][150/496]	Time 1.263 (1.325)	Loss 109.03746796 (127.94880269)
+Epoch: [13][200/496]	Time 1.283 (1.327)	Loss 283.66418457 (127.46682404)
+Epoch: [13][250/496]	Time 1.273 (1.328)	Loss 223.22918701 (125.37930272)
+Epoch: [13][300/496]	Time 1.257 (1.329)	Loss 137.74371338 (124.92745372)
+Epoch: [13][350/496]	Time 1.263 (1.329)	Loss 99.79031372 (125.37705540)
+Epoch: [13][400/496]	Time 1.293 (1.329)	Loss 188.92349243 (125.36520069)
+Epoch: [13][450/496]	Time 1.289 (1.329)	Loss 129.50537109 (126.71921875)
+Test: [50/59]	Loss 136.48156738 (145.16488007)
+===> Average loss_gflat-loss on training set is 126.78388566
+===> Average loss_gflat-loss on validation set is 144.66723736
+===> Evaluation laneline F-measure: 0.818292
+===> Evaluation laneline Recall: 0.843694
+===> Evaluation laneline Precision: 0.794375
+===> Evaluation centerline F-measure: 0.838324
+===> Evaluation centerline Recall: 0.882586
+===> Evaluation centerline Precision: 0.798291
+===> Last best loss_gflat-loss was 130.32310990 in epoch 12
+Best model copied
+
+ => Start train set for EPOCH 14
+Epoch: [14][50/496]	Time 1.277 (1.304)	Loss 106.77616119 (116.88292725)
+Epoch: [14][100/496]	Time 1.249 (1.318)	Loss 123.65486908 (118.74888779)
+Epoch: [14][150/496]	Time 1.276 (1.319)	Loss 103.81809998 (125.21009343)
+Epoch: [14][200/496]	Time 1.279 (1.320)	Loss 56.79461670 (123.67325838)
+Epoch: [14][250/496]	Time 1.255 (1.323)	Loss 81.75971985 (121.98960835)
+Epoch: [14][300/496]	Time 1.285 (1.325)	Loss 109.65827942 (122.76298270)
+Epoch: [14][350/496]	Time 1.496 (1.326)	Loss 131.70419312 (122.99074513)
+Epoch: [14][400/496]	Time 1.273 (1.326)	Loss 106.01573181 (122.23000048)
+Epoch: [14][450/496]	Time 1.283 (1.327)	Loss 81.33758545 (122.92205548)
+Test: [50/59]	Loss 325.94287109 (153.47434341)
+===> Average loss_gflat-loss on training set is 123.98894630
+===> Average loss_gflat-loss on validation set is 148.59512006
+===> Evaluation laneline F-measure: 0.813537
+===> Evaluation laneline Recall: 0.831532
+===> Evaluation laneline Precision: 0.796305
+===> Evaluation centerline F-measure: 0.844510
+===> Evaluation centerline Recall: 0.877482
+===> Evaluation centerline Precision: 0.813927
+===> Last best loss_gflat-loss was 126.78388566 in epoch 13
+Best model copied
+
+ => Start train set for EPOCH 15
+Epoch: [15][50/496]	Time 1.263 (1.297)	Loss 99.55719757 (115.94790482)
+Epoch: [15][100/496]	Time 1.263 (1.309)	Loss 249.49760437 (119.22931255)
+Epoch: [15][150/496]	Time 1.236 (1.315)	Loss 94.91764832 (120.26899417)
+Epoch: [15][200/496]	Time 1.293 (1.317)	Loss 73.75279236 (118.97113979)
+Epoch: [15][250/496]	Time 1.240 (1.316)	Loss 88.50285339 (117.34505119)
+Epoch: [15][300/496]	Time 1.281 (1.316)	Loss 70.64231873 (119.93083778)
+Epoch: [15][350/496]	Time 1.280 (1.318)	Loss 75.56012726 (120.08923842)
+Epoch: [15][400/496]	Time 1.233 (1.318)	Loss 314.36160278 (120.13828418)
+Epoch: [15][450/496]	Time 1.226 (1.317)	Loss 160.54840088 (120.37415488)
+Test: [50/59]	Loss 72.95410156 (138.28399429)
+===> Average loss_gflat-loss on training set is 120.50576459
+===> Average loss_gflat-loss on validation set is 137.25651971
+===> Evaluation laneline F-measure: 0.827401
+===> Evaluation laneline Recall: 0.854955
+===> Evaluation laneline Precision: 0.801569
+===> Evaluation centerline F-measure: 0.869214
+===> Evaluation centerline Recall: 0.896767
+===> Evaluation centerline Precision: 0.843305
+===> Last best loss_gflat-loss was 123.98894630 in epoch 14
+Best model copied
+
+ => Start train set for EPOCH 16
+Epoch: [16][50/496]	Time 1.293 (1.288)	Loss 84.84093475 (111.88988815)
+Epoch: [16][100/496]	Time 1.273 (1.301)	Loss 55.58730698 (112.80659546)
+Epoch: [16][150/496]	Time 1.294 (1.304)	Loss 88.31581879 (112.12641052)
+Epoch: [16][200/496]	Time 1.266 (1.306)	Loss 96.91227722 (116.65517750)
+Epoch: [16][250/496]	Time 1.245 (1.307)	Loss 87.68753052 (117.50500198)
+Epoch: [16][300/496]	Time 1.239 (1.308)	Loss 95.38780212 (117.05734229)
+Epoch: [16][350/496]	Time 1.233 (1.308)	Loss 91.84413147 (116.60151022)
+Epoch: [16][400/496]	Time 1.255 (1.308)	Loss 78.83390808 (116.29135272)
+Epoch: [16][450/496]	Time 1.277 (1.308)	Loss 85.54765320 (116.34550435)
+Test: [50/59]	Loss 95.16181946 (147.40542854)
+===> Average loss_gflat-loss on training set is 116.81756684
+===> Average loss_gflat-loss on validation set is 143.50374739
+===> Evaluation laneline F-measure: 0.812969
+===> Evaluation laneline Recall: 0.837387
+===> Evaluation laneline Precision: 0.789935
+===> Evaluation centerline F-measure: 0.846394
+===> Evaluation centerline Recall: 0.874078
+===> Evaluation centerline Precision: 0.820410
+===> Last best loss_gflat-loss was 120.50576459 in epoch 15
+Best model copied
+
+ => Start train set for EPOCH 17
+Epoch: [17][50/496]	Time 1.266 (1.283)	Loss 212.32353210 (130.15969772)
+Epoch: [17][100/496]	Time 1.259 (1.296)	Loss 113.17709351 (117.61127872)
+Epoch: [17][150/496]	Time 1.250 (1.303)	Loss 95.32042694 (114.80733650)
+Epoch: [17][200/496]	Time 1.267 (1.304)	Loss 126.84438324 (114.53767838)
+Epoch: [17][250/496]	Time 1.266 (1.305)	Loss 132.77084351 (113.16890320)
+Epoch: [17][300/496]	Time 1.243 (1.305)	Loss 98.04103088 (113.38754190)
+Epoch: [17][350/496]	Time 1.338 (1.307)	Loss 104.94667053 (112.35185838)
+Epoch: [17][400/496]	Time 1.556 (1.307)	Loss 89.88713074 (114.82315868)
+Epoch: [17][450/496]	Time 1.375 (1.307)	Loss 112.47085571 (114.68694967)
+Test: [50/59]	Loss 121.51531219 (122.21822227)
+===> Average loss_gflat-loss on training set is 114.79867818
+===> Average loss_gflat-loss on validation set is 130.51613417
+===> Evaluation laneline F-measure: 0.830802
+===> Evaluation laneline Recall: 0.854955
+===> Evaluation laneline Precision: 0.807978
+===> Evaluation centerline F-measure: 0.865664
+===> Evaluation centerline Recall: 0.895632
+===> Evaluation centerline Precision: 0.837636
+===> Last best loss_gflat-loss was 116.81756684 in epoch 16
+Best model copied
+
+ => Start train set for EPOCH 18
+Epoch: [18][50/496]	Time 1.268 (1.278)	Loss 150.36175537 (102.83586349)
+Epoch: [18][100/496]	Time 1.383 (1.295)	Loss 130.78547668 (106.01096718)
+Epoch: [18][150/496]	Time 1.401 (1.302)	Loss 59.37160873 (105.00570684)
+Epoch: [18][200/496]	Time 1.240 (1.304)	Loss 103.86931610 (109.53007666)
+Epoch: [18][250/496]	Time 1.266 (1.304)	Loss 87.96469116 (110.31127795)
+Epoch: [18][300/496]	Time 1.269 (1.306)	Loss 103.50746155 (111.32479771)
+Epoch: [18][350/496]	Time 1.290 (1.306)	Loss 183.79463196 (111.77662318)
+Epoch: [18][400/496]	Time 1.301 (1.307)	Loss 252.87759399 (112.10979937)
+Epoch: [18][450/496]	Time 1.296 (1.309)	Loss 136.69851685 (111.14430500)
+Test: [50/59]	Loss 42.22977448 (126.04838341)
+===> Average loss_gflat-loss on training set is 110.22068405
+===> Average loss_gflat-loss on validation set is 129.23764691
+===> Evaluation laneline F-measure: 0.828796
+===> Evaluation laneline Recall: 0.840090
+===> Evaluation laneline Precision: 0.817803
+===> Evaluation centerline F-measure: 0.853725
+===> Evaluation centerline Recall: 0.872944
+===> Evaluation centerline Precision: 0.835334
+===> Last best loss_gflat-loss was 114.79867818 in epoch 17
+Best model copied
+
+ => Start train set for EPOCH 19
+Epoch: [19][50/496]	Time 1.259 (1.281)	Loss 110.26187897 (105.85193924)
+Epoch: [19][100/496]	Time 1.244 (1.296)	Loss 453.80270386 (107.82337372)
+Epoch: [19][150/496]	Time 1.262 (1.301)	Loss 69.67402649 (112.75711281)
+Epoch: [19][200/496]	Time 1.371 (1.306)	Loss 119.39304352 (111.82278683)
+Epoch: [19][250/496]	Time 1.258 (1.307)	Loss 88.90216827 (112.32201923)
+Epoch: [19][300/496]	Time 1.268 (1.308)	Loss 115.25243378 (110.02173719)
+Epoch: [19][350/496]	Time 1.292 (1.310)	Loss 304.38803101 (109.43281782)
+Epoch: [19][400/496]	Time 1.227 (1.311)	Loss 204.45407104 (109.10777803)
+Epoch: [19][450/496]	Time 1.281 (1.312)	Loss 184.41313171 (109.09754256)
+Test: [50/59]	Loss 174.86618042 (124.88174759)
+===> Average loss_gflat-loss on training set is 109.11698663
+===> Average loss_gflat-loss on validation set is 126.50010520
+===> Evaluation laneline F-measure: 0.841670
+===> Evaluation laneline Recall: 0.868018
+===> Evaluation laneline Precision: 0.816875
+===> Evaluation centerline F-measure: 0.873677
+===> Evaluation centerline Recall: 0.913783
+===> Evaluation centerline Precision: 0.836944
+===> Last best loss_gflat-loss was 110.22068405 in epoch 18
+Best model copied
+
+ => Start train set for EPOCH 20
+Epoch: [20][50/496]	Time 1.290 (1.287)	Loss 131.44053650 (99.33531311)
+Epoch: [20][100/496]	Time 1.269 (1.308)	Loss 107.82169342 (105.66820419)
+Epoch: [20][150/496]	Time 1.256 (1.311)	Loss 122.86418152 (109.55578829)
+Epoch: [20][200/496]	Time 1.261 (1.314)	Loss 70.11466217 (107.33423088)
+Epoch: [20][250/496]	Time 1.240 (1.315)	Loss 80.88894653 (107.99889748)
+Epoch: [20][300/496]	Time 1.264 (1.313)	Loss 91.09373474 (107.18233242)
+Epoch: [20][350/496]	Time 1.269 (1.313)	Loss 64.79025269 (106.40823336)
+Epoch: [20][400/496]	Time 1.253 (1.314)	Loss 95.56056213 (105.64973711)
+Epoch: [20][450/496]	Time 1.443 (1.314)	Loss 83.00209045 (105.43559451)
+Test: [50/59]	Loss 107.97997284 (126.27646454)
+===> Average loss_gflat-loss on training set is 105.37102647
+===> Average loss_gflat-loss on validation set is 125.37450836
+===> Evaluation laneline F-measure: 0.837779
+===> Evaluation laneline Recall: 0.860811
+===> Evaluation laneline Precision: 0.815948
+===> Evaluation centerline F-measure: 0.874713
+===> Evaluation centerline Recall: 0.901872
+===> Evaluation centerline Precision: 0.849143
+===> Last best loss_gflat-loss was 109.11698663 in epoch 19
+Best model copied
+
+ => Start train set for EPOCH 21
+Epoch: [21][50/496]	Time 1.248 (1.288)	Loss 55.19129944 (97.15065865)
+Epoch: [21][100/496]	Time 1.312 (1.299)	Loss 83.37358093 (98.95231400)
+Epoch: [21][150/496]	Time 1.235 (1.302)	Loss 93.32238770 (98.14884099)
+Epoch: [21][200/496]	Time 1.542 (1.306)	Loss 72.73175049 (100.24580238)
+Epoch: [21][250/496]	Time 1.266 (1.308)	Loss 92.79961395 (100.28378340)
+Epoch: [21][300/496]	Time 1.250 (1.309)	Loss 82.86082458 (101.41160645)
+Epoch: [21][350/496]	Time 1.268 (1.310)	Loss 88.83352661 (102.16444196)
+Epoch: [21][400/496]	Time 1.274 (1.311)	Loss 73.55592346 (102.76278220)
+Epoch: [21][450/496]	Time 1.276 (1.311)	Loss 102.40048218 (103.84702637)
+Test: [50/59]	Loss 184.23139954 (125.26481331)
+===> Average loss_gflat-loss on training set is 104.05235147
+===> Average loss_gflat-loss on validation set is 134.62593253
+===> Evaluation laneline F-measure: 0.817430
+===> Evaluation laneline Recall: 0.843243
+===> Evaluation laneline Precision: 0.793151
+===> Evaluation centerline F-measure: 0.838356
+===> Evaluation centerline Recall: 0.875780
+===> Evaluation centerline Precision: 0.804000
+===> Last best loss_gflat-loss was 105.37102647 in epoch 20
+Best model copied
+
+ => Start train set for EPOCH 22
+Epoch: [22][50/496]	Time 1.258 (1.289)	Loss 128.69790649 (95.80268394)
+Epoch: [22][100/496]	Time 1.272 (1.305)	Loss 99.23536682 (98.22688030)
+Epoch: [22][150/496]	Time 1.266 (1.308)	Loss 82.67765808 (101.38188517)
+Epoch: [22][200/496]	Time 1.277 (1.311)	Loss 205.39431763 (102.18780298)
+Epoch: [22][250/496]	Time 1.280 (1.313)	Loss 86.82755280 (103.63012103)
+Epoch: [22][300/496]	Time 1.275 (1.313)	Loss 92.12587738 (102.46717759)
+Epoch: [22][350/496]	Time 1.260 (1.313)	Loss 88.91835785 (103.79999096)
+Epoch: [22][400/496]	Time 1.259 (1.315)	Loss 119.22045898 (104.48142058)
+Epoch: [22][450/496]	Time 1.248 (1.316)	Loss 57.56857300 (103.62568931)
+Test: [50/59]	Loss 76.08289337 (131.06572227)
+===> Average loss_gflat-loss on training set is 102.77504249
+===> Average loss_gflat-loss on validation set is 126.52642292
+===> Evaluation laneline F-measure: 0.832763
+===> Evaluation laneline Recall: 0.849099
+===> Evaluation laneline Precision: 0.817045
+===> Evaluation centerline F-measure: 0.854955
+===> Evaluation centerline Recall: 0.881452
+===> Evaluation centerline Precision: 0.830006
+===> Last best loss_gflat-loss was 104.05235147 in epoch 21
+Best model copied
+
+ => Start train set for EPOCH 23
+Epoch: [23][50/496]	Time 1.367 (1.282)	Loss 100.53917694 (119.28419159)
+Epoch: [23][100/496]	Time 1.318 (1.299)	Loss 79.75623322 (107.20179123)
+Epoch: [23][150/496]	Time 1.329 (1.306)	Loss 83.42842865 (105.43451800)
+Epoch: [23][200/496]	Time 1.313 (1.309)	Loss 107.45690155 (101.30492315)
+Epoch: [23][250/496]	Time 1.296 (1.313)	Loss 89.35978699 (99.90265089)
+Epoch: [23][300/496]	Time 1.287 (1.314)	Loss 177.90881348 (100.03836072)
+Epoch: [23][350/496]	Time 1.310 (1.315)	Loss 116.28502655 (98.47580256)
+Epoch: [23][400/496]	Time 1.565 (1.317)	Loss 146.45703125 (98.51402832)
+Epoch: [23][450/496]	Time 1.325 (1.318)	Loss 101.05882263 (98.25612751)
+Test: [50/59]	Loss 58.12082291 (115.79711388)
+===> Average loss_gflat-loss on training set is 100.04624679
+===> Average loss_gflat-loss on validation set is 122.77052217
+===> Evaluation laneline F-measure: 0.848446
+===> Evaluation laneline Recall: 0.867117
+===> Evaluation laneline Precision: 0.830563
+===> Evaluation centerline F-measure: 0.874427
+===> Evaluation centerline Recall: 0.903006
+===> Evaluation centerline Precision: 0.847603
+===> Last best loss_gflat-loss was 102.77504249 in epoch 22
+Best model copied
+
+ => Start train set for EPOCH 24
+Epoch: [24][50/496]	Time 1.504 (1.280)	Loss 72.19841003 (97.92129318)
+Epoch: [24][100/496]	Time 1.269 (1.300)	Loss 77.49114227 (98.04572376)
+Epoch: [24][150/496]	Time 1.289 (1.309)	Loss 182.87251282 (103.13909643)
+Epoch: [24][200/496]	Time 1.305 (1.311)	Loss 67.79726410 (100.95412542)
+Epoch: [24][250/496]	Time 1.258 (1.314)	Loss 53.46810913 (98.85895772)
+Epoch: [24][300/496]	Time 1.246 (1.314)	Loss 78.17882538 (97.90609044)
+Epoch: [24][350/496]	Time 1.261 (1.315)	Loss 100.29148102 (98.24690673)
+Epoch: [24][400/496]	Time 1.269 (1.315)	Loss 86.84976959 (98.34889224)
+Epoch: [24][450/496]	Time 1.261 (1.316)	Loss 215.24169922 (98.33308200)
+Test: [50/59]	Loss 98.59523773 (123.15306526)
+===> Average loss_gflat-loss on training set is 98.82484241
+===> Average loss_gflat-loss on validation set is 119.07617621
+===> Evaluation laneline F-measure: 0.832816
+===> Evaluation laneline Recall: 0.851351
+===> Evaluation laneline Precision: 0.815072
+===> Evaluation centerline F-measure: 0.867980
+===> Evaluation centerline Recall: 0.895632
+===> Evaluation centerline Precision: 0.841985
+===> Last best loss_gflat-loss was 100.04624679 in epoch 23
+Best model copied
+
+ => Start train set for EPOCH 25
+Epoch: [25][50/496]	Time 1.283 (1.289)	Loss 37.48245621 (90.37525253)
+Epoch: [25][100/496]	Time 1.223 (1.305)	Loss 72.93324280 (96.53471611)
+Epoch: [25][150/496]	Time 1.262 (1.307)	Loss 97.25933075 (98.10231738)
+Epoch: [25][200/496]	Time 1.281 (1.314)	Loss 112.32310486 (98.45391647)
+Epoch: [25][250/496]	Time 1.286 (1.318)	Loss 64.61077881 (98.09419852)
+Epoch: [25][300/496]	Time 1.293 (1.321)	Loss 53.40373993 (97.92541098)
+Epoch: [25][350/496]	Time 1.361 (1.323)	Loss 99.51203156 (99.43121004)
+Epoch: [25][400/496]	Time 1.348 (1.325)	Loss 91.33210754 (98.48950287)
+Epoch: [25][450/496]	Time 1.272 (1.326)	Loss 93.06472778 (97.96753765)
+Test: [50/59]	Loss 102.85832214 (124.15870064)
+===> Average loss_gflat-loss on training set is 98.08717546
+===> Average loss_gflat-loss on validation set is 121.91607142
+===> Evaluation laneline F-measure: 0.846402
+===> Evaluation laneline Recall: 0.869369
+===> Evaluation laneline Precision: 0.824618
+===> Evaluation centerline F-measure: 0.872534
+===> Evaluation centerline Recall: 0.903006
+===> Evaluation centerline Precision: 0.844052
+===> Last best loss_gflat-loss was 98.82484241 in epoch 24
+Best model copied
+
+ => Start train set for EPOCH 26
+Epoch: [26][50/496]	Time 1.639 (1.315)	Loss 62.91254044 (88.78692451)
+Epoch: [26][100/496]	Time 1.257 (1.322)	Loss 99.14440155 (92.13618217)
+Epoch: [26][150/496]	Time 1.266 (1.326)	Loss 70.34981537 (96.82282458)
+Epoch: [26][200/496]	Time 1.277 (1.328)	Loss 109.13082886 (97.98708014)
+Epoch: [26][250/496]	Time 1.369 (1.330)	Loss 62.12286377 (95.17165324)
+Epoch: [26][300/496]	Time 1.292 (1.331)	Loss 64.77378845 (93.91184189)
+Epoch: [26][350/496]	Time 1.293 (1.331)	Loss 94.18107605 (93.83160371)
+Epoch: [26][400/496]	Time 1.264 (1.331)	Loss 66.84346771 (93.16550146)
+Epoch: [26][450/496]	Time 1.280 (1.332)	Loss 86.19969940 (93.60775005)
+Test: [50/59]	Loss 103.69856262 (121.93806587)
+===> Average loss_gflat-loss on training set is 94.09392769
+===> Average loss_gflat-loss on validation set is 121.64727725
+===> Evaluation laneline F-measure: 0.843396
+===> Evaluation laneline Recall: 0.860811
+===> Evaluation laneline Precision: 0.826673
+===> Evaluation centerline F-measure: 0.877384
+===> Evaluation centerline Recall: 0.908678
+===> Evaluation centerline Precision: 0.848174
+===> Last best loss_gflat-loss was 98.08717546 in epoch 25
+Best model copied
+
+ => Start train set for EPOCH 27
+Epoch: [27][50/496]	Time 1.351 (1.311)	Loss 71.83135223 (87.47512245)
+Epoch: [27][100/496]	Time 1.363 (1.328)	Loss 113.91947937 (93.00989574)
+Epoch: [27][150/496]	Time 1.303 (1.333)	Loss 106.27412415 (92.73826416)
+Epoch: [27][200/496]	Time 1.275 (1.333)	Loss 65.62481689 (93.77942793)
+Epoch: [27][250/496]	Time 1.347 (1.333)	Loss 75.63482666 (92.11830713)
+Epoch: [27][300/496]	Time 1.262 (1.336)	Loss 70.90606689 (92.47771267)
+Epoch: [27][350/496]	Time 1.303 (1.336)	Loss 247.22875977 (93.45584620)
+Epoch: [27][400/496]	Time 1.285 (1.337)	Loss 129.98153687 (94.14167866)
+Epoch: [27][450/496]	Time 1.296 (1.336)	Loss 54.51362991 (93.96177066)
+Test: [50/59]	Loss 81.67948914 (125.71583420)
+===> Average loss_gflat-loss on training set is 93.63297808
+===> Average loss_gflat-loss on validation set is 122.00328911
+===> Evaluation laneline F-measure: 0.848115
+===> Evaluation laneline Recall: 0.863514
+===> Evaluation laneline Precision: 0.833256
+===> Evaluation centerline F-measure: 0.884377
+===> Evaluation centerline Recall: 0.907544
+===> Evaluation centerline Precision: 0.862364
+===> Last best loss_gflat-loss was 94.09392769 in epoch 26
+Best model copied
+
+ => Start train set for EPOCH 28
+Epoch: [28][50/496]	Time 1.285 (1.303)	Loss 78.96500397 (91.00268929)
+Epoch: [28][100/496]	Time 1.258 (1.317)	Loss 103.75672913 (92.54391117)
+Epoch: [28][150/496]	Time 1.277 (1.323)	Loss 99.49891663 (97.26864517)
+Epoch: [28][200/496]	Time 1.269 (1.327)	Loss 59.41788864 (95.92922796)
+Epoch: [28][250/496]	Time 1.268 (1.329)	Loss 85.23056030 (93.77372255)
+Epoch: [28][300/496]	Time 1.260 (1.329)	Loss 111.30284882 (93.80334582)
+Epoch: [28][350/496]	Time 1.270 (1.330)	Loss 67.25214386 (93.17540245)
+Epoch: [28][400/496]	Time 1.286 (1.331)	Loss 94.23720551 (93.90096482)
+Epoch: [28][450/496]	Time 1.287 (1.331)	Loss 92.54788971 (92.75842049)
+Test: [50/59]	Loss 278.00991821 (122.49917679)
+===> Average loss_gflat-loss on training set is 92.51950569
+===> Average loss_gflat-loss on validation set is 117.78543653
+===> Evaluation laneline F-measure: 0.850856
+===> Evaluation laneline Recall: 0.859459
+===> Evaluation laneline Precision: 0.842424
+===> Evaluation centerline F-measure: 0.878700
+===> Evaluation centerline Recall: 0.896200
+===> Evaluation centerline Precision: 0.861872
+===> Last best loss_gflat-loss was 93.63297808 in epoch 27
+Best model copied
+
+ => Start train set for EPOCH 29
+Epoch: [29][50/496]	Time 1.535 (1.316)	Loss 137.98481750 (96.62013397)
+Epoch: [29][100/496]	Time 1.301 (1.328)	Loss 92.02986145 (92.08448856)
+Epoch: [29][150/496]	Time 1.264 (1.330)	Loss 79.77632904 (92.92414060)
+Epoch: [29][200/496]	Time 1.282 (1.332)	Loss 89.23008728 (90.00403185)
+Epoch: [29][250/496]	Time 1.294 (1.333)	Loss 111.91655731 (88.95289693)
+Epoch: [29][300/496]	Time 1.292 (1.334)	Loss 69.49263763 (89.30284865)
+Epoch: [29][350/496]	Time 1.254 (1.335)	Loss 69.04347992 (88.83311226)
+Epoch: [29][400/496]	Time 1.384 (1.335)	Loss 68.74346161 (89.13089756)
+Epoch: [29][450/496]	Time 1.359 (1.335)	Loss 170.80014038 (90.00976195)
+Test: [50/59]	Loss 62.94884491 (119.71344513)
+===> Average loss_gflat-loss on training set is 90.26998996
+===> Average loss_gflat-loss on validation set is 118.64589297
+===> Evaluation laneline F-measure: 0.847937
+===> Evaluation laneline Recall: 0.866216
+===> Evaluation laneline Precision: 0.830415
+===> Evaluation centerline F-measure: 0.875734
+===> Evaluation centerline Recall: 0.900170
+===> Evaluation centerline Precision: 0.852590
+===> Last best loss_gflat-loss was 92.51950569 in epoch 28
+Best model copied
+
+ => Start train set for EPOCH 30
+Epoch: [30][50/496]	Time 1.271 (1.301)	Loss 58.98755646 (93.58615723)
+Epoch: [30][100/496]	Time 1.301 (1.319)	Loss 102.73928070 (92.64906361)
+Epoch: [30][150/496]	Time 1.324 (1.322)	Loss 53.71440887 (91.64259781)
+Epoch: [30][200/496]	Time 1.305 (1.327)	Loss 69.30081177 (89.63150778)
+Epoch: [30][250/496]	Time 1.530 (1.329)	Loss 51.87971497 (89.15569016)
+Epoch: [30][300/496]	Time 1.371 (1.331)	Loss 63.88711929 (88.11873882)
+Epoch: [30][350/496]	Time 1.289 (1.331)	Loss 96.98283386 (87.80534351)
+Epoch: [30][400/496]	Time 1.291 (1.332)	Loss 73.71647644 (89.25821909)
+Epoch: [30][450/496]	Time 1.316 (1.331)	Loss 110.45214844 (89.11413483)
+Test: [50/59]	Loss 133.81109619 (105.31497894)
+===> Average loss_gflat-loss on training set is 88.28093869
+===> Average loss_gflat-loss on validation set is 117.28014956
+===> Evaluation laneline F-measure: 0.851869
+===> Evaluation laneline Recall: 0.851802
+===> Evaluation laneline Precision: 0.851937
+===> Evaluation centerline F-measure: 0.885774
+===> Evaluation centerline Recall: 0.899603
+===> Evaluation centerline Precision: 0.872365
+===> Last best loss_gflat-loss was 90.26998996 in epoch 29
+Best model copied
+
+ => Start train set for EPOCH 31
+Epoch: [31][50/496]	Time 1.248 (1.306)	Loss 103.53549194 (77.53500366)
+Epoch: [31][100/496]	Time 1.262 (1.320)	Loss 150.44889832 (79.12616756)
+Epoch: [31][150/496]	Time 1.260 (1.321)	Loss 71.57059479 (80.12064532)
+Epoch: [31][200/496]	Time 1.287 (1.322)	Loss 179.96411133 (83.05133343)
+Epoch: [31][250/496]	Time 1.287 (1.323)	Loss 168.91828918 (83.01960548)
+Epoch: [31][300/496]	Time 1.317 (1.324)	Loss 94.59955597 (84.24005168)
+Epoch: [31][350/496]	Time 1.322 (1.324)	Loss 68.80205536 (86.52093716)
+Epoch: [31][400/496]	Time 1.349 (1.325)	Loss 57.53484344 (87.46333943)
+Epoch: [31][450/496]	Time 1.240 (1.326)	Loss 128.74479675 (86.96146847)
+Test: [50/59]	Loss 53.96119308 (116.19801521)
+===> Average loss_gflat-loss on training set is 87.80537254
+===> Average loss_gflat-loss on validation set is 114.13204794
+===> Evaluation laneline F-measure: 0.855523
+===> Evaluation laneline Recall: 0.869820
+===> Evaluation laneline Precision: 0.841690
+===> Evaluation centerline F-measure: 0.891238
+===> Evaluation centerline Recall: 0.909246
+===> Evaluation centerline Precision: 0.873930
+===> Last best loss_gflat-loss was 88.28093869 in epoch 30
+Best model copied
+
+ => Start train set for EPOCH 32
+Epoch: [32][50/496]	Time 1.300 (1.299)	Loss 62.13368988 (93.54684357)
+Epoch: [32][100/496]	Time 1.375 (1.318)	Loss 66.59952545 (91.11023537)
+Epoch: [32][150/496]	Time 1.299 (1.324)	Loss 81.80936432 (90.63681547)
+Epoch: [32][200/496]	Time 1.250 (1.326)	Loss 174.22833252 (89.78788034)
+Epoch: [32][250/496]	Time 1.348 (1.329)	Loss 101.50798035 (89.84786658)
+Epoch: [32][300/496]	Time 1.331 (1.328)	Loss 59.73709106 (89.06910622)
+Epoch: [32][350/496]	Time 1.317 (1.329)	Loss 79.00260925 (88.08051220)
+Epoch: [32][400/496]	Time 1.293 (1.329)	Loss 86.80732727 (87.51348722)
+Epoch: [32][450/496]	Time 1.258 (1.329)	Loss 136.27641296 (87.36339790)
+Test: [50/59]	Loss 134.56614685 (119.22455261)
+===> Average loss_gflat-loss on training set is 86.91709609
+===> Average loss_gflat-loss on validation set is 116.70427659
+===> Evaluation laneline F-measure: 0.851615
+===> Evaluation laneline Recall: 0.867117
+===> Evaluation laneline Precision: 0.836659
+===> Evaluation centerline F-measure: 0.880233
+===> Evaluation centerline Recall: 0.906977
+===> Evaluation centerline Precision: 0.855023
+===> Last best loss_gflat-loss was 87.80537254 in epoch 31
+Best model copied
+
+ => Start train set for EPOCH 33
+Epoch: [33][50/496]	Time 1.246 (1.307)	Loss 94.20905304 (95.01114342)
+Epoch: [33][100/496]	Time 1.282 (1.317)	Loss 44.73526382 (92.80677765)
+Epoch: [33][150/496]	Time 1.299 (1.324)	Loss 65.50606537 (89.52862333)
+Epoch: [33][200/496]	Time 1.349 (1.326)	Loss 57.96405029 (90.00702665)
+Epoch: [33][250/496]	Time 1.360 (1.326)	Loss 63.24504852 (88.07532256)
+Epoch: [33][300/496]	Time 1.326 (1.326)	Loss 92.27468872 (88.51732981)
+Epoch: [33][350/496]	Time 1.282 (1.327)	Loss 108.96623993 (86.76879817)
+Epoch: [33][400/496]	Time 1.537 (1.328)	Loss 92.38909149 (86.54044243)
+Epoch: [33][450/496]	Time 1.292 (1.328)	Loss 71.27872467 (85.17864895)
+Test: [50/59]	Loss 77.98077393 (109.04372757)
+===> Average loss_gflat-loss on training set is 85.01753764
+===> Average loss_gflat-loss on validation set is 116.18225059
+===> Evaluation laneline F-measure: 0.850963
+===> Evaluation laneline Recall: 0.857658
+===> Evaluation laneline Precision: 0.844372
+===> Evaluation centerline F-measure: 0.881716
+===> Evaluation centerline Recall: 0.901872
+===> Evaluation centerline Precision: 0.862443
+===> Last best loss_gflat-loss was 86.91709609 in epoch 32
+Best model copied
+
+ => Start train set for EPOCH 34
+Epoch: [34][50/496]	Time 1.259 (1.296)	Loss 72.96413422 (77.55826904)
+Epoch: [34][100/496]	Time 1.245 (1.306)	Loss 92.97885132 (78.61482738)
+Epoch: [34][150/496]	Time 1.253 (1.313)	Loss 78.77410889 (78.58503677)
+Epoch: [34][200/496]	Time 1.283 (1.318)	Loss 74.28665924 (79.92907887)
+Epoch: [34][250/496]	Time 1.273 (1.318)	Loss 60.37769699 (80.28682306)
+Epoch: [34][300/496]	Time 1.287 (1.321)	Loss 65.96946716 (83.32676072)
+Epoch: [34][350/496]	Time 1.258 (1.320)	Loss 84.21884155 (83.38405466)
+Epoch: [34][400/496]	Time 1.264 (1.321)	Loss 96.99362946 (85.33608295)
+Epoch: [34][450/496]	Time 1.278 (1.322)	Loss 121.43009949 (86.24039146)
+Test: [50/59]	Loss 63.98840332 (117.42439209)
+===> Average loss_gflat-loss on training set is 86.01897078
+===> Average loss_gflat-loss on validation set is 112.44051271
+===> Evaluation laneline F-measure: 0.853447
+===> Evaluation laneline Recall: 0.870270
+===> Evaluation laneline Precision: 0.837263
+===> Evaluation centerline F-measure: 0.888098
+===> Evaluation centerline Recall: 0.913783
+===> Evaluation centerline Precision: 0.863818
+===> Last best loss_gflat-loss was 85.01753764 in epoch 33
+
+ => Start train set for EPOCH 35
+Epoch: [35][50/496]	Time 1.266 (1.286)	Loss 68.86901093 (81.91412117)
+Epoch: [35][100/496]	Time 1.276 (1.301)	Loss 62.44218826 (85.15627510)
+Epoch: [35][150/496]	Time 1.261 (1.308)	Loss 58.25830841 (83.18457553)
+Epoch: [35][200/496]	Time 1.251 (1.315)	Loss 67.82814789 (81.42424183)
+Epoch: [35][250/496]	Time 1.292 (1.320)	Loss 64.70187378 (82.49594901)
+Epoch: [35][300/496]	Time 1.272 (1.322)	Loss 57.91751862 (82.50636046)
+Epoch: [35][350/496]	Time 1.526 (1.324)	Loss 130.19761658 (81.90629497)
+Epoch: [35][400/496]	Time 1.287 (1.324)	Loss 71.65367126 (82.95569231)
+Epoch: [35][450/496]	Time 1.264 (1.324)	Loss 81.32186890 (83.16499190)
+Test: [50/59]	Loss 74.53455353 (101.81649750)
+===> Average loss_gflat-loss on training set is 83.19055875
+===> Average loss_gflat-loss on validation set is 114.77404242
+===> Evaluation laneline F-measure: 0.848430
+===> Evaluation laneline Recall: 0.866667
+===> Evaluation laneline Precision: 0.830947
+===> Evaluation centerline F-measure: 0.876703
+===> Evaluation centerline Recall: 0.904141
+===> Evaluation centerline Precision: 0.850882
+===> Last best loss_gflat-loss was 85.01753764 in epoch 33
+Best model copied
+
+ => Start train set for EPOCH 36
+Epoch: [36][50/496]	Time 1.278 (1.285)	Loss 119.47039795 (77.86844215)
+Epoch: [36][100/496]	Time 1.308 (1.304)	Loss 115.17254639 (78.64705959)
+Epoch: [36][150/496]	Time 1.253 (1.310)	Loss 63.87822723 (80.35851949)
+Epoch: [36][200/496]	Time 1.278 (1.314)	Loss 64.17324066 (80.17329628)
+Epoch: [36][250/496]	Time 1.279 (1.316)	Loss 60.66182327 (79.22956836)
+Epoch: [36][300/496]	Time 1.283 (1.316)	Loss 67.80653381 (80.03672454)
+Epoch: [36][350/496]	Time 1.269 (1.316)	Loss 131.72441101 (80.57907232)
+Epoch: [36][400/496]	Time 1.281 (1.317)	Loss 91.98773956 (80.65181190)
+Epoch: [36][450/496]	Time 1.245 (1.318)	Loss 92.23429871 (80.73007835)
+Test: [50/59]	Loss 118.36432648 (114.31872887)
+===> Average loss_gflat-loss on training set is 81.73426227
+===> Average loss_gflat-loss on validation set is 112.17038384
+===> Evaluation laneline F-measure: 0.849994
+===> Evaluation laneline Recall: 0.855405
+===> Evaluation laneline Precision: 0.844651
+===> Evaluation centerline F-measure: 0.890655
+===> Evaluation centerline Recall: 0.908111
+===> Evaluation centerline Precision: 0.873858
+===> Last best loss_gflat-loss was 83.19055875 in epoch 35
+Best model copied
+
+ => Start train set for EPOCH 37
+Epoch: [37][50/496]	Time 1.251 (1.291)	Loss 55.62404633 (82.23322563)
+Epoch: [37][100/496]	Time 1.281 (1.306)	Loss 98.80480957 (80.05265594)
+Epoch: [37][150/496]	Time 1.260 (1.310)	Loss 58.15628433 (81.08814603)
+Epoch: [37][200/496]	Time 1.267 (1.311)	Loss 83.72595978 (83.30192085)
+Epoch: [37][250/496]	Time 1.281 (1.311)	Loss 43.89466476 (81.77279979)
+Epoch: [37][300/496]	Time 1.261 (1.312)	Loss 60.98205566 (80.17590550)
+Epoch: [37][350/496]	Time 1.259 (1.313)	Loss 85.37554169 (81.05916120)
+Epoch: [37][400/496]	Time 1.249 (1.314)	Loss 94.34313965 (80.67680151)
+Epoch: [37][450/496]	Time 1.435 (1.314)	Loss 62.81095886 (80.82183693)
+Test: [50/59]	Loss 176.38494873 (112.32703911)
+===> Average loss_gflat-loss on training set is 80.94895433
+===> Average loss_gflat-loss on validation set is 114.08113305
+===> Evaluation laneline F-measure: 0.853563
+===> Evaluation laneline Recall: 0.873874
+===> Evaluation laneline Precision: 0.834175
+===> Evaluation centerline F-measure: 0.887138
+===> Evaluation centerline Recall: 0.910947
+===> Evaluation centerline Precision: 0.864542
+===> Last best loss_gflat-loss was 81.73426227 in epoch 36
+Best model copied
+
+ => Start train set for EPOCH 38
+Epoch: [38][50/496]	Time 1.394 (1.300)	Loss 79.43166351 (77.25339897)
+Epoch: [38][100/496]	Time 1.349 (1.321)	Loss 63.13098145 (77.99064236)
+Epoch: [38][150/496]	Time 1.292 (1.327)	Loss 76.02222443 (77.91032056)
+Epoch: [38][200/496]	Time 1.296 (1.330)	Loss 82.09877777 (77.48729551)
+Epoch: [38][250/496]	Time 1.282 (1.329)	Loss 59.47018051 (79.82000653)
+Epoch: [38][300/496]	Time 1.216 (1.329)	Loss 85.31604004 (81.30296633)
+Epoch: [38][350/496]	Time 1.258 (1.328)	Loss 80.75572205 (80.97617846)
+Epoch: [38][400/496]	Time 1.229 (1.327)	Loss 44.56461716 (80.02251014)
+Epoch: [38][450/496]	Time 1.258 (1.327)	Loss 53.83395386 (79.82363930)
+Test: [50/59]	Loss 82.83547974 (115.18223976)
+===> Average loss_gflat-loss on training set is 79.92125219
+===> Average loss_gflat-loss on validation set is 116.59803397
+===> Evaluation laneline F-measure: 0.854657
+===> Evaluation laneline Recall: 0.859459
+===> Evaluation laneline Precision: 0.849908
+===> Evaluation centerline F-measure: 0.890387
+===> Evaluation centerline Recall: 0.900737
+===> Evaluation centerline Precision: 0.880274
+===> Last best loss_gflat-loss was 80.94895433 in epoch 37
+Best model copied
+
+ => Start train set for EPOCH 39
+Epoch: [39][50/496]	Time 1.262 (1.296)	Loss 65.96810913 (79.35487129)
+Epoch: [39][100/496]	Time 1.320 (1.316)	Loss 68.90568542 (76.62213169)
+Epoch: [39][150/496]	Time 1.339 (1.318)	Loss 91.04065704 (75.20135818)
+Epoch: [39][200/496]	Time 1.338 (1.320)	Loss 51.19250107 (81.03354309)
+Epoch: [39][250/496]	Time 1.332 (1.324)	Loss 48.72693634 (79.42356465)
+Epoch: [39][300/496]	Time 1.294 (1.324)	Loss 72.83913422 (78.95147695)
+Epoch: [39][350/496]	Time 1.253 (1.325)	Loss 54.25716400 (78.72112875)
+Epoch: [39][400/496]	Time 1.356 (1.327)	Loss 72.84003448 (78.74995808)
+Epoch: [39][450/496]	Time 1.274 (1.328)	Loss 57.01303101 (79.63957860)
+Test: [50/59]	Loss 106.28113556 (109.09345932)
+===> Average loss_gflat-loss on training set is 78.96445076
+===> Average loss_gflat-loss on validation set is 107.73942889
+===> Evaluation laneline F-measure: 0.864752
+===> Evaluation laneline Recall: 0.875676
+===> Evaluation laneline Precision: 0.854099
+===> Evaluation centerline F-measure: 0.886791
+===> Evaluation centerline Recall: 0.905842
+===> Evaluation centerline Precision: 0.868526
+===> Last best loss_gflat-loss was 79.92125219 in epoch 38
+Best model copied
+
+ => Start train set for EPOCH 40
+Epoch: [40][50/496]	Time 1.269 (1.302)	Loss 48.00860596 (76.04254745)
+Epoch: [40][100/496]	Time 1.359 (1.318)	Loss 65.32138824 (73.94772293)
+Epoch: [40][150/496]	Time 1.397 (1.324)	Loss 52.71957016 (74.07704460)
+Epoch: [40][200/496]	Time 1.250 (1.325)	Loss 54.73859787 (74.15226019)
+Epoch: [40][250/496]	Time 1.238 (1.325)	Loss 57.18934250 (76.25221507)
+Epoch: [40][300/496]	Time 1.294 (1.327)	Loss 72.08605957 (76.47241681)
+Epoch: [40][350/496]	Time 1.263 (1.328)	Loss 105.44916534 (78.40940086)
+Epoch: [40][400/496]	Time 1.267 (1.330)	Loss 67.41246796 (78.18095845)
+Epoch: [40][450/496]	Time 1.252 (1.331)	Loss 107.63623047 (78.33624777)
+Test: [50/59]	Loss 162.43402100 (114.01461739)
+===> Average loss_gflat-loss on training set is 78.23636401
+===> Average loss_gflat-loss on validation set is 109.82542193
+===> Evaluation laneline F-measure: 0.862114
+===> Evaluation laneline Recall: 0.874775
+===> Evaluation laneline Precision: 0.849815
+===> Evaluation centerline F-measure: 0.892300
+===> Evaluation centerline Recall: 0.912082
+===> Evaluation centerline Precision: 0.873360
+===> Last best loss_gflat-loss was 78.96445076 in epoch 39
+Best model copied
+
+ => Start train set for EPOCH 41
+Epoch: [41][50/496]	Time 1.295 (1.306)	Loss 77.86136627 (75.71137337)
+Epoch: [41][100/496]	Time 1.297 (1.323)	Loss 58.00188446 (74.84351959)
+Epoch: [41][150/496]	Time 1.399 (1.327)	Loss 62.72698212 (76.11497307)
+Epoch: [41][200/496]	Time 1.274 (1.329)	Loss 59.72715759 (77.10067986)
+Epoch: [41][250/496]	Time 1.267 (1.330)	Loss 53.86593628 (78.26356017)
+Epoch: [41][300/496]	Time 1.242 (1.332)	Loss 50.35026169 (76.95150781)
+Epoch: [41][350/496]	Time 1.270 (1.332)	Loss 115.11787415 (77.79471130)
+Epoch: [41][400/496]	Time 1.276 (1.334)	Loss 30.40124512 (77.85184403)
+Epoch: [41][450/496]	Time 1.264 (1.335)	Loss 64.14574432 (77.83923236)
+Test: [50/59]	Loss 103.51814270 (116.18106422)
+===> Average loss_gflat-loss on training set is 77.45835599
+===> Average loss_gflat-loss on validation set is 114.56653123
+===> Evaluation laneline F-measure: 0.850169
+===> Evaluation laneline Recall: 0.857658
+===> Evaluation laneline Precision: 0.842811
+===> Evaluation centerline F-measure: 0.881306
+===> Evaluation centerline Recall: 0.899603
+===> Evaluation centerline Precision: 0.863740
+===> Last best loss_gflat-loss was 78.23636401 in epoch 40
+Best model copied
+
+ => Start train set for EPOCH 42
+Epoch: [42][50/496]	Time 1.323 (1.315)	Loss 113.48848724 (78.52306801)
+Epoch: [42][100/496]	Time 1.285 (1.324)	Loss 70.59706116 (75.54347301)
+Epoch: [42][150/496]	Time 1.285 (1.329)	Loss 74.43207550 (76.82289536)
+Epoch: [42][200/496]	Time 1.320 (1.329)	Loss 71.25955963 (77.86837074)
+Epoch: [42][250/496]	Time 1.286 (1.328)	Loss 50.78024292 (77.08051279)
+Epoch: [42][300/496]	Time 1.228 (1.325)	Loss 61.05994415 (76.24747854)
+Epoch: [42][350/496]	Time 1.283 (1.328)	Loss 39.58965302 (77.64478730)
+Epoch: [42][400/496]	Time 1.293 (1.331)	Loss 101.22815704 (77.96708964)
+Epoch: [42][450/496]	Time 1.237 (1.330)	Loss 40.54159927 (77.59287170)
+Test: [50/59]	Loss 93.22181702 (118.00448730)
+===> Average loss_gflat-loss on training set is 76.90395983
+===> Average loss_gflat-loss on validation set is 115.92409742
+===> Evaluation laneline F-measure: 0.853531
+===> Evaluation laneline Recall: 0.861261
+===> Evaluation laneline Precision: 0.845940
+===> Evaluation centerline F-measure: 0.887551
+===> Evaluation centerline Recall: 0.905275
+===> Evaluation centerline Precision: 0.870508
+===> Last best loss_gflat-loss was 77.45835599 in epoch 41
+Best model copied
+
+ => Start train set for EPOCH 43
+Epoch: [43][50/496]	Time 1.291 (1.293)	Loss 49.47191238 (75.38015312)
+Epoch: [43][100/496]	Time 1.246 (1.307)	Loss 149.82519531 (74.85657372)
+Epoch: [43][150/496]	Time 1.306 (1.308)	Loss 57.16184998 (75.37052396)
+Epoch: [43][200/496]	Time 1.274 (1.307)	Loss 67.05304718 (76.79605864)
+Epoch: [43][250/496]	Time 1.260 (1.306)	Loss 71.29154968 (79.30193916)
+Epoch: [43][300/496]	Time 1.253 (1.305)	Loss 60.19958878 (77.98396640)
+Epoch: [43][350/496]	Time 1.318 (1.305)	Loss 64.05934906 (76.29605446)
+Epoch: [43][400/496]	Time 1.289 (1.305)	Loss 75.67507172 (76.03095348)
+Epoch: [43][450/496]	Time 1.321 (1.307)	Loss 62.35506821 (76.30902552)
+Test: [50/59]	Loss 98.44001770 (112.14920296)
+===> Average loss_gflat-loss on training set is 75.55058805
+===> Average loss_gflat-loss on validation set is 110.01801526
+===> Evaluation laneline F-measure: 0.868110
+===> Evaluation laneline Recall: 0.875225
+===> Evaluation laneline Precision: 0.861111
+===> Evaluation centerline F-measure: 0.894319
+===> Evaluation centerline Recall: 0.912649
+===> Evaluation centerline Precision: 0.876712
+===> Last best loss_gflat-loss was 76.90395983 in epoch 42
+Best model copied
+
+ => Start train set for EPOCH 44
+Epoch: [44][50/496]	Time 1.270 (1.290)	Loss 62.92461777 (65.88258442)
+Epoch: [44][100/496]	Time 1.288 (1.305)	Loss 49.80880737 (70.62968397)
+Epoch: [44][150/496]	Time 1.233 (1.305)	Loss 239.44479370 (71.93408538)
+Epoch: [44][200/496]	Time 1.334 (1.302)	Loss 96.84074402 (71.97049674)
+Epoch: [44][250/496]	Time 1.307 (1.304)	Loss 67.59152985 (73.12980656)
+Epoch: [44][300/496]	Time 1.329 (1.305)	Loss 79.03681946 (74.88252315)
+Epoch: [44][350/496]	Time 1.265 (1.305)	Loss 69.38732910 (74.92264681)
+Epoch: [44][400/496]	Time 1.247 (1.304)	Loss 71.68056488 (74.83011623)
+Epoch: [44][450/496]	Time 1.294 (1.304)	Loss 83.36729431 (74.46198810)
+Test: [50/59]	Loss 63.86614227 (110.04131821)
+===> Average loss_gflat-loss on training set is 74.77857974
+===> Average loss_gflat-loss on validation set is 109.29843521
+===> Evaluation laneline F-measure: 0.861442
+===> Evaluation laneline Recall: 0.869369
+===> Evaluation laneline Precision: 0.853659
+===> Evaluation centerline F-measure: 0.894665
+===> Evaluation centerline Recall: 0.913216
+===> Evaluation centerline Precision: 0.876853
+===> Last best loss_gflat-loss was 75.55058805 in epoch 43
+Best model copied
+
+ => Start train set for EPOCH 45
+Epoch: [45][50/496]	Time 1.251 (1.275)	Loss 52.13489532 (66.31234222)
+Epoch: [45][100/496]	Time 1.264 (1.291)	Loss 64.69537354 (68.72881611)
+Epoch: [45][150/496]	Time 1.269 (1.296)	Loss 75.62450409 (71.55326907)
+Epoch: [45][200/496]	Time 1.247 (1.298)	Loss 74.02973175 (70.27340699)
+Epoch: [45][250/496]	Time 1.228 (1.298)	Loss 144.87562561 (70.19492461)
+Epoch: [45][300/496]	Time 1.244 (1.300)	Loss 66.83747864 (72.68037450)
+Epoch: [45][350/496]	Time 1.264 (1.300)	Loss 61.21500015 (73.56310806)
+Epoch: [45][400/496]	Time 1.263 (1.300)	Loss 81.85970306 (74.39198309)
+Epoch: [45][450/496]	Time 1.274 (1.302)	Loss 116.13710022 (73.82087608)
+Test: [50/59]	Loss 42.41580963 (105.29424667)
+===> Average loss_gflat-loss on training set is 73.84864238
+===> Average loss_gflat-loss on validation set is 108.00055901
+===> Evaluation laneline F-measure: 0.851407
+===> Evaluation laneline Recall: 0.860360
+===> Evaluation laneline Precision: 0.842640
+===> Evaluation centerline F-measure: 0.891004
+===> Evaluation centerline Recall: 0.910380
+===> Evaluation centerline Precision: 0.872437
+===> Last best loss_gflat-loss was 74.77857974 in epoch 44
+Best model copied
+
+ => Start train set for EPOCH 46
+Epoch: [46][50/496]	Time 1.268 (1.278)	Loss 49.36871338 (69.56073235)
+Epoch: [46][100/496]	Time 1.280 (1.289)	Loss 53.20795822 (73.10904064)
+Epoch: [46][150/496]	Time 1.219 (1.293)	Loss 95.16687012 (72.57908117)
+Epoch: [46][200/496]	Time 1.251 (1.295)	Loss 74.27883148 (69.74813465)
+Epoch: [46][250/496]	Time 1.228 (1.297)	Loss 60.42109680 (70.75666563)
+Epoch: [46][300/496]	Time 1.355 (1.300)	Loss 146.05804443 (71.04827365)
+Epoch: [46][350/496]	Time 1.314 (1.302)	Loss 61.20129395 (71.93156472)
+Epoch: [46][400/496]	Time 1.347 (1.303)	Loss 63.17112732 (71.58882880)
+Epoch: [46][450/496]	Time 1.335 (1.305)	Loss 61.32973480 (71.91884851)
+Test: [50/59]	Loss 114.22339630 (110.12506073)
+===> Average loss_gflat-loss on training set is 72.36987513
+===> Average loss_gflat-loss on validation set is 111.18794600
+===> Evaluation laneline F-measure: 0.857924
+===> Evaluation laneline Recall: 0.863063
+===> Evaluation laneline Precision: 0.852846
+===> Evaluation centerline F-measure: 0.896476
+===> Evaluation centerline Recall: 0.910380
+===> Evaluation centerline Precision: 0.882991
+===> Last best loss_gflat-loss was 73.84864238 in epoch 45
+Best model copied
+
+ => Start train set for EPOCH 47
+Epoch: [47][50/496]	Time 1.265 (1.286)	Loss 67.57679749 (79.50262138)
+Epoch: [47][100/496]	Time 1.305 (1.291)	Loss 83.08546448 (72.13235020)
+Epoch: [47][150/496]	Time 1.355 (1.296)	Loss 90.28495789 (72.61354085)
+Epoch: [47][200/496]	Time 1.249 (1.297)	Loss 94.24452209 (73.04579237)
+Epoch: [47][250/496]	Time 1.482 (1.300)	Loss 55.06877518 (73.07705978)
+Epoch: [47][300/496]	Time 1.348 (1.303)	Loss 71.17273712 (73.35041089)
+Epoch: [47][350/496]	Time 1.264 (1.303)	Loss 42.37953568 (72.75728250)
+Epoch: [47][400/496]	Time 1.225 (1.303)	Loss 43.92279434 (71.99438568)
+Epoch: [47][450/496]	Time 1.211 (1.303)	Loss 65.72036743 (72.59699190)
+Test: [50/59]	Loss 61.34494019 (106.53839714)
+===> Average loss_gflat-loss on training set is 72.79591230
+===> Average loss_gflat-loss on validation set is 105.87667452
+===> Evaluation laneline F-measure: 0.863867
+===> Evaluation laneline Recall: 0.880180
+===> Evaluation laneline Precision: 0.848148
+===> Evaluation centerline F-measure: 0.893991
+===> Evaluation centerline Recall: 0.925695
+===> Evaluation centerline Precision: 0.864387
+===> Last best loss_gflat-loss was 72.36987513 in epoch 46
+
+ => Start train set for EPOCH 48
+Epoch: [48][50/496]	Time 1.583 (1.277)	Loss 45.98604965 (69.56592216)
+Epoch: [48][100/496]	Time 1.456 (1.289)	Loss 75.68636322 (74.25466999)
+Epoch: [48][150/496]	Time 1.260 (1.295)	Loss 86.71338654 (73.81452693)
+Epoch: [48][200/496]	Time 1.255 (1.298)	Loss 79.93453217 (72.65753683)
+Epoch: [48][250/496]	Time 1.261 (1.301)	Loss 95.16636658 (72.20113368)
+Epoch: [48][300/496]	Time 1.243 (1.302)	Loss 52.34642792 (71.60614260)
+Epoch: [48][350/496]	Time 1.271 (1.303)	Loss 59.87791061 (71.23419142)
+Epoch: [48][400/496]	Time 1.267 (1.302)	Loss 85.09380341 (71.21541849)
+Epoch: [48][450/496]	Time 1.261 (1.302)	Loss 65.95490265 (71.67271654)
+Test: [50/59]	Loss 163.28607178 (107.78722496)
+===> Average loss_gflat-loss on training set is 71.19865958
+===> Average loss_gflat-loss on validation set is 107.34746933
+===> Evaluation laneline F-measure: 0.869754
+===> Evaluation laneline Recall: 0.875225
+===> Evaluation laneline Precision: 0.864352
+===> Evaluation centerline F-measure: 0.895252
+===> Evaluation centerline Recall: 0.908678
+===> Evaluation centerline Precision: 0.882218
+===> Last best loss_gflat-loss was 72.36987513 in epoch 46
+Best model copied
+
+ => Start train set for EPOCH 49
+Epoch: [49][50/496]	Time 1.250 (1.282)	Loss 85.02923584 (67.36163078)
+Epoch: [49][100/496]	Time 1.234 (1.289)	Loss 60.78425980 (67.79097790)
+Epoch: [49][150/496]	Time 1.323 (1.293)	Loss 79.20915222 (66.83244779)
+Epoch: [49][200/496]	Time 1.248 (1.292)	Loss 77.53578949 (66.85422964)
+Epoch: [49][250/496]	Time 1.255 (1.295)	Loss 74.06630707 (66.90927141)
+Epoch: [49][300/496]	Time 1.239 (1.296)	Loss 57.98217392 (67.91813805)
+Epoch: [49][350/496]	Time 1.245 (1.297)	Loss 62.37613297 (69.14937161)
+Epoch: [49][400/496]	Time 1.293 (1.299)	Loss 94.98265839 (69.67810279)
+Epoch: [49][450/496]	Time 1.257 (1.299)	Loss 62.66811752 (70.05531754)
+Test: [50/59]	Loss 54.14481735 (106.04491699)
+===> Average loss_gflat-loss on training set is 70.13949737
+===> Average loss_gflat-loss on validation set is 109.30079638
+===> Evaluation laneline F-measure: 0.859629
+===> Evaluation laneline Recall: 0.854054
+===> Evaluation laneline Precision: 0.865278
+===> Evaluation centerline F-measure: 0.891669
+===> Evaluation centerline Recall: 0.889393
+===> Evaluation centerline Precision: 0.893957
+===> Last best loss_gflat-loss was 71.19865958 in epoch 48
+Best model copied
+
+ => Start train set for EPOCH 50
+Epoch: [50][50/496]	Time 1.245 (1.281)	Loss 51.63047028 (63.90216019)
+Epoch: [50][100/496]	Time 1.239 (1.290)	Loss 41.51480103 (66.03705402)
+Epoch: [50][150/496]	Time 1.251 (1.297)	Loss 43.16821671 (66.63712247)
+Epoch: [50][200/496]	Time 1.248 (1.297)	Loss 64.06811523 (67.67081047)
+Epoch: [50][250/496]	Time 1.247 (1.298)	Loss 78.20223999 (68.37979917)
+Epoch: [50][300/496]	Time 1.236 (1.298)	Loss 56.69352722 (68.21375733)
+Epoch: [50][350/496]	Time 1.261 (1.299)	Loss 43.32786560 (69.32131392)
+Epoch: [50][400/496]	Time 1.243 (1.300)	Loss 67.36112976 (69.06757432)
+Epoch: [50][450/496]	Time 1.254 (1.297)	Loss 57.48934174 (69.82421992)
+Test: [50/59]	Loss 81.04510498 (117.96121651)
+===> Average loss_gflat-loss on training set is 69.99003521
+===> Average loss_gflat-loss on validation set is 119.65913915
+===> Evaluation laneline F-measure: 0.857604
+===> Evaluation laneline Recall: 0.868919
+===> Evaluation laneline Precision: 0.846580
+===> Evaluation centerline F-measure: 0.898385
+===> Evaluation centerline Recall: 0.921157
+===> Evaluation centerline Precision: 0.876712
+===> Last best loss_gflat-loss was 70.13949737 in epoch 49
+Best model copied
+Init weights in network with [normal]
+#reused param: 357
+=> loading checkpoint '/kaggle/working/illus_chgFirsttry/Gen_LaneNet_ext/model_best_epoch_49.pth.tar'
+Evaluating sample 0 / 472
+Evaluating sample 1 / 472
+Evaluating sample 2 / 472
+Evaluating sample 3 / 472
+Evaluating sample 4 / 472
+Evaluating sample 5 / 472
+Evaluating sample 6 / 472
+Evaluating sample 7 / 472
+Evaluating sample 8 / 472
+Evaluating sample 9 / 472
+Evaluating sample 10 / 472
+Evaluating sample 11 / 472
+Evaluating sample 12 / 472
+Evaluating sample 13 / 472
+Evaluating sample 14 / 472
+Evaluating sample 15 / 472
+Evaluating sample 16 / 472
+Evaluating sample 17 / 472
+Evaluating sample 18 / 472
+Evaluating sample 19 / 472
+Evaluating sample 20 / 472
+Evaluating sample 21 / 472
+Evaluating sample 22 / 472
+Evaluating sample 23 / 472
+Evaluating sample 24 / 472
+Evaluating sample 25 / 472
+Evaluating sample 26 / 472
+Evaluating sample 27 / 472
+Evaluating sample 28 / 472
+Evaluating sample 29 / 472
+Evaluating sample 30 / 472
+Evaluating sample 31 / 472
+Evaluating sample 32 / 472
+Evaluating sample 33 / 472
+Evaluating sample 34 / 472
+Evaluating sample 35 / 472
+Evaluating sample 36 / 472
+Evaluating sample 37 / 472
+Evaluating sample 38 / 472
+Evaluating sample 39 / 472
+Evaluating sample 40 / 472
+Evaluating sample 41 / 472
+Evaluating sample 42 / 472
+Evaluating sample 43 / 472
+Evaluating sample 44 / 472
+Evaluating sample 45 / 472
+Evaluating sample 46 / 472
+Evaluating sample 47 / 472
+Evaluating sample 48 / 472
+Evaluating sample 49 / 472
+Evaluating sample 50 / 472
+Evaluating sample 51 / 472
+Evaluating sample 52 / 472
+Evaluating sample 53 / 472
+Evaluating sample 54 / 472
+Evaluating sample 55 / 472
+Evaluating sample 56 / 472
+Evaluating sample 57 / 472
+Evaluating sample 58 / 472
+Evaluating sample 59 / 472
+Evaluating sample 60 / 472
+Evaluating sample 61 / 472
+Evaluating sample 62 / 472
+Evaluating sample 63 / 472
+Evaluating sample 64 / 472
+Evaluating sample 65 / 472
+Evaluating sample 66 / 472
+Evaluating sample 67 / 472
+Evaluating sample 68 / 472
+Evaluating sample 69 / 472
+Evaluating sample 70 / 472
+Evaluating sample 71 / 472
+Evaluating sample 72 / 472
+Evaluating sample 73 / 472
+Evaluating sample 74 / 472
+Evaluating sample 75 / 472
+Evaluating sample 76 / 472
+Evaluating sample 77 / 472
+Evaluating sample 78 / 472
+Evaluating sample 79 / 472
+Evaluating sample 80 / 472
+Evaluating sample 81 / 472
+Evaluating sample 82 / 472
+Evaluating sample 83 / 472
+Evaluating sample 84 / 472
+Evaluating sample 85 / 472
+Evaluating sample 86 / 472
+Evaluating sample 87 / 472
+Evaluating sample 88 / 472
+Evaluating sample 89 / 472
+Evaluating sample 90 / 472
+Evaluating sample 91 / 472
+Evaluating sample 92 / 472
+Evaluating sample 93 / 472
+Evaluating sample 94 / 472
+Evaluating sample 95 / 472
+Evaluating sample 96 / 472
+Evaluating sample 97 / 472
+Evaluating sample 98 / 472
+Evaluating sample 99 / 472
+Evaluating sample 100 / 472
+Evaluating sample 101 / 472
+Evaluating sample 102 / 472
+Evaluating sample 103 / 472
+Evaluating sample 104 / 472
+Evaluating sample 105 / 472
+Evaluating sample 106 / 472
+Evaluating sample 107 / 472
+Evaluating sample 108 / 472
+Evaluating sample 109 / 472
+Evaluating sample 110 / 472
+Evaluating sample 111 / 472
+Evaluating sample 112 / 472
+Evaluating sample 113 / 472
+Evaluating sample 114 / 472
+Evaluating sample 115 / 472
+Evaluating sample 116 / 472
+Evaluating sample 117 / 472
+Evaluating sample 118 / 472
+Evaluating sample 119 / 472
+Evaluating sample 120 / 472
+Evaluating sample 121 / 472
+Evaluating sample 122 / 472
+Evaluating sample 123 / 472
+Evaluating sample 124 / 472
+Evaluating sample 125 / 472
+Evaluating sample 126 / 472
+Evaluating sample 127 / 472
+Evaluating sample 128 / 472
+Evaluating sample 129 / 472
+Evaluating sample 130 / 472
+Evaluating sample 131 / 472
+Evaluating sample 132 / 472
+Evaluating sample 133 / 472
+Evaluating sample 134 / 472
+Evaluating sample 135 / 472
+Evaluating sample 136 / 472
+Evaluating sample 137 / 472
+Evaluating sample 138 / 472
+Evaluating sample 139 / 472
+Evaluating sample 140 / 472
+Evaluating sample 141 / 472
+Evaluating sample 142 / 472
+Evaluating sample 143 / 472
+Evaluating sample 144 / 472
+Evaluating sample 145 / 472
+Evaluating sample 146 / 472
+Evaluating sample 147 / 472
+Evaluating sample 148 / 472
+Evaluating sample 149 / 472
+Evaluating sample 150 / 472
+Evaluating sample 151 / 472
+Evaluating sample 152 / 472
+Evaluating sample 153 / 472
+Evaluating sample 154 / 472
+Evaluating sample 155 / 472
+Evaluating sample 156 / 472
+Evaluating sample 157 / 472
+Evaluating sample 158 / 472
+Evaluating sample 159 / 472
+Evaluating sample 160 / 472
+Evaluating sample 161 / 472
+Evaluating sample 162 / 472
+Evaluating sample 163 / 472
+Evaluating sample 164 / 472
+Evaluating sample 165 / 472
+Evaluating sample 166 / 472
+Evaluating sample 167 / 472
+Evaluating sample 168 / 472
+Evaluating sample 169 / 472
+Evaluating sample 170 / 472
+Evaluating sample 171 / 472
+Evaluating sample 172 / 472
+Evaluating sample 173 / 472
+Evaluating sample 174 / 472
+Evaluating sample 175 / 472
+Evaluating sample 176 / 472
+Evaluating sample 177 / 472
+Evaluating sample 178 / 472
+Evaluating sample 179 / 472
+Evaluating sample 180 / 472
+Evaluating sample 181 / 472
+Evaluating sample 182 / 472
+Evaluating sample 183 / 472
+Evaluating sample 184 / 472
+Evaluating sample 185 / 472
+Evaluating sample 186 / 472
+Evaluating sample 187 / 472
+Evaluating sample 188 / 472
+Evaluating sample 189 / 472
+Evaluating sample 190 / 472
+Evaluating sample 191 / 472
+Evaluating sample 192 / 472
+Evaluating sample 193 / 472
+Evaluating sample 194 / 472
+Evaluating sample 195 / 472
+Evaluating sample 196 / 472
+Evaluating sample 197 / 472
+Evaluating sample 198 / 472
+Evaluating sample 199 / 472
+Evaluating sample 200 / 472
+Evaluating sample 201 / 472
+Evaluating sample 202 / 472
+Evaluating sample 203 / 472
+Evaluating sample 204 / 472
+Evaluating sample 205 / 472
+Evaluating sample 206 / 472
+Evaluating sample 207 / 472
+Evaluating sample 208 / 472
+Evaluating sample 209 / 472
+Evaluating sample 210 / 472
+Evaluating sample 211 / 472
+Evaluating sample 212 / 472
+Evaluating sample 213 / 472
+Evaluating sample 214 / 472
+Evaluating sample 215 / 472
+Evaluating sample 216 / 472
+Evaluating sample 217 / 472
+Evaluating sample 218 / 472
+Evaluating sample 219 / 472
+Evaluating sample 220 / 472
+Evaluating sample 221 / 472
+Evaluating sample 222 / 472
+Evaluating sample 223 / 472
+Evaluating sample 224 / 472
+Evaluating sample 225 / 472
+Evaluating sample 226 / 472
+Evaluating sample 227 / 472
+Evaluating sample 228 / 472
+Evaluating sample 229 / 472
+Evaluating sample 230 / 472
+Evaluating sample 231 / 472
+Evaluating sample 232 / 472
+Evaluating sample 233 / 472
+Evaluating sample 234 / 472
+Evaluating sample 235 / 472
+Evaluating sample 236 / 472
+Evaluating sample 237 / 472
+Evaluating sample 238 / 472
+Evaluating sample 239 / 472
+Evaluating sample 240 / 472
+Evaluating sample 241 / 472
+Evaluating sample 242 / 472
+Evaluating sample 243 / 472
+Evaluating sample 244 / 472
+Evaluating sample 245 / 472
+Evaluating sample 246 / 472
+Evaluating sample 247 / 472
+Evaluating sample 248 / 472
+Evaluating sample 249 / 472
+Evaluating sample 250 / 472
+Evaluating sample 251 / 472
+Evaluating sample 252 / 472
+Evaluating sample 253 / 472
+Evaluating sample 254 / 472
+Evaluating sample 255 / 472
+Evaluating sample 256 / 472
+Evaluating sample 257 / 472
+Evaluating sample 258 / 472
+Evaluating sample 259 / 472
+Evaluating sample 260 / 472
+Evaluating sample 261 / 472
+Evaluating sample 262 / 472
+Evaluating sample 263 / 472
+Evaluating sample 264 / 472
+Evaluating sample 265 / 472
+Evaluating sample 266 / 472
+Evaluating sample 267 / 472
+Evaluating sample 268 / 472
+Evaluating sample 269 / 472
+Evaluating sample 270 / 472
+Evaluating sample 271 / 472
+Evaluating sample 272 / 472
+Evaluating sample 273 / 472
+Evaluating sample 274 / 472
+Evaluating sample 275 / 472
+Evaluating sample 276 / 472
+Evaluating sample 277 / 472
+Evaluating sample 278 / 472
+Evaluating sample 279 / 472
+Evaluating sample 280 / 472
+Evaluating sample 281 / 472
+Evaluating sample 282 / 472
+Evaluating sample 283 / 472
+Evaluating sample 284 / 472
+Evaluating sample 285 / 472
+Evaluating sample 286 / 472
+Evaluating sample 287 / 472
+Evaluating sample 288 / 472
+Evaluating sample 289 / 472
+Evaluating sample 290 / 472
+Evaluating sample 291 / 472
+Evaluating sample 292 / 472
+Evaluating sample 293 / 472
+Evaluating sample 294 / 472
+Evaluating sample 295 / 472
+Evaluating sample 296 / 472
+Evaluating sample 297 / 472
+Evaluating sample 298 / 472
+Evaluating sample 299 / 472
+Evaluating sample 300 / 472
+Evaluating sample 301 / 472
+Evaluating sample 302 / 472
+Evaluating sample 303 / 472
+Evaluating sample 304 / 472
+Evaluating sample 305 / 472
+Evaluating sample 306 / 472
+Evaluating sample 307 / 472
+Evaluating sample 308 / 472
+Evaluating sample 309 / 472
+Evaluating sample 310 / 472
+Evaluating sample 311 / 472
+Evaluating sample 312 / 472
+Evaluating sample 313 / 472
+Evaluating sample 314 / 472
+Evaluating sample 315 / 472
+Evaluating sample 316 / 472
+Evaluating sample 317 / 472
+Evaluating sample 318 / 472
+Evaluating sample 319 / 472
+Evaluating sample 320 / 472
+Evaluating sample 321 / 472
+Evaluating sample 322 / 472
+Evaluating sample 323 / 472
+Evaluating sample 324 / 472
+Evaluating sample 325 / 472
+Evaluating sample 326 / 472
+Evaluating sample 327 / 472
+Evaluating sample 328 / 472
+Evaluating sample 329 / 472
+Evaluating sample 330 / 472
+Evaluating sample 331 / 472
+Evaluating sample 332 / 472
+Evaluating sample 333 / 472
+Evaluating sample 334 / 472
+Evaluating sample 335 / 472
+Evaluating sample 336 / 472
+Evaluating sample 337 / 472
+Evaluating sample 338 / 472
+Evaluating sample 339 / 472
+Evaluating sample 340 / 472
+Evaluating sample 341 / 472
+Evaluating sample 342 / 472
+Evaluating sample 343 / 472
+Evaluating sample 344 / 472
+Evaluating sample 345 / 472
+Evaluating sample 346 / 472
+Evaluating sample 347 / 472
+Evaluating sample 348 / 472
+Evaluating sample 349 / 472
+Evaluating sample 350 / 472
+Evaluating sample 351 / 472
+Evaluating sample 352 / 472
+Evaluating sample 353 / 472
+Evaluating sample 354 / 472
+Evaluating sample 355 / 472
+Evaluating sample 356 / 472
+Evaluating sample 357 / 472
+Evaluating sample 358 / 472
+Evaluating sample 359 / 472
+Evaluating sample 360 / 472
+Evaluating sample 361 / 472
+Evaluating sample 362 / 472
+Evaluating sample 363 / 472
+Evaluating sample 364 / 472
+Evaluating sample 365 / 472
+Evaluating sample 366 / 472
+Evaluating sample 367 / 472
+Evaluating sample 368 / 472
+Evaluating sample 369 / 472
+Evaluating sample 370 / 472
+Evaluating sample 371 / 472
+Evaluating sample 372 / 472
+Evaluating sample 373 / 472
+Evaluating sample 374 / 472
+Evaluating sample 375 / 472
+Evaluating sample 376 / 472
+Evaluating sample 377 / 472
+Evaluating sample 378 / 472
+Evaluating sample 379 / 472
+Evaluating sample 380 / 472
+Evaluating sample 381 / 472
+Evaluating sample 382 / 472
+Evaluating sample 383 / 472
+Evaluating sample 384 / 472
+Evaluating sample 385 / 472
+Evaluating sample 386 / 472
+Evaluating sample 387 / 472
+Evaluating sample 388 / 472
+Evaluating sample 389 / 472
+Evaluating sample 390 / 472
+Evaluating sample 391 / 472
+Evaluating sample 392 / 472
+Evaluating sample 393 / 472
+Evaluating sample 394 / 472
+Evaluating sample 395 / 472
+Evaluating sample 396 / 472
+Evaluating sample 397 / 472
+Evaluating sample 398 / 472
+Evaluating sample 399 / 472
+Evaluating sample 400 / 472
+Evaluating sample 401 / 472
+Evaluating sample 402 / 472
+Evaluating sample 403 / 472
+Evaluating sample 404 / 472
+Evaluating sample 405 / 472
+Evaluating sample 406 / 472
+Evaluating sample 407 / 472
+Evaluating sample 408 / 472
+Evaluating sample 409 / 472
+Evaluating sample 410 / 472
+Evaluating sample 411 / 472
+Evaluating sample 412 / 472
+Evaluating sample 413 / 472
+Evaluating sample 414 / 472
+Evaluating sample 415 / 472
+Evaluating sample 416 / 472
+Evaluating sample 417 / 472
+Evaluating sample 418 / 472
+Evaluating sample 419 / 472
+Evaluating sample 420 / 472
+Evaluating sample 421 / 472
+Evaluating sample 422 / 472
+Evaluating sample 423 / 472
+Evaluating sample 424 / 472
+Evaluating sample 425 / 472
+Evaluating sample 426 / 472
+Evaluating sample 427 / 472
+Evaluating sample 428 / 472
+Evaluating sample 429 / 472
+Evaluating sample 430 / 472
+Evaluating sample 431 / 472
+Evaluating sample 432 / 472
+Evaluating sample 433 / 472
+Evaluating sample 434 / 472
+Evaluating sample 435 / 472
+Evaluating sample 436 / 472
+Evaluating sample 437 / 472
+Evaluating sample 438 / 472
+Evaluating sample 439 / 472
+Evaluating sample 440 / 472
+Evaluating sample 441 / 472
+Evaluating sample 442 / 472
+Evaluating sample 443 / 472
+Evaluating sample 444 / 472
+Evaluating sample 445 / 472
+Evaluating sample 446 / 472
+Evaluating sample 447 / 472
+Evaluating sample 448 / 472
+Evaluating sample 449 / 472
+Evaluating sample 450 / 472
+Evaluating sample 451 / 472
+Evaluating sample 452 / 472
+Evaluating sample 453 / 472
+Evaluating sample 454 / 472
+Evaluating sample 455 / 472
+Evaluating sample 456 / 472
+Evaluating sample 457 / 472
+Evaluating sample 458 / 472
+Evaluating sample 459 / 472
+Evaluating sample 460 / 472
+Evaluating sample 461 / 472
+Evaluating sample 462 / 472
+Evaluating sample 463 / 472
+Evaluating sample 464 / 472
+Evaluating sample 465 / 472
+Evaluating sample 466 / 472
+Evaluating sample 467 / 472
+Evaluating sample 468 / 472
+Evaluating sample 469 / 472
+Evaluating sample 470 / 472
+Evaluating sample 471 / 472
+Metrics: AP, F-score, x error (close), x error (far), z error (close), z error (far)
+Laneline:  0.875  0.858  0.0819  0.564  0.016  0.268
+Centerline:  0.917  0.898  0.0699  0.527  0.0148  0.236
+Init weights in network with [normal]
+#reused param: 357
+=> loading checkpoint '/kaggle/input/3d-gen-lanenet-pre/pretrained/gen_lanenet_geo_model.tar'
+Init weights in network with [normal]
+#reused param: 357
+=> loading checkpoint '/kaggle/input/3d-gen-lanenet-pre/pretrained/gen_lanenet_geo_model.tar'
+Init weights in network with [normal]
+#reused param: 357
+=> loading checkpoint '/kaggle/input/3d-gen-lanenet-pre/pretrained/gen_lanenet_geo_model.tar'
+Init weights in network with [normal]
+#reused param: 357
+=> loading checkpoint '/kaggle/input/3d-gen-lanenet-pre/pretrained/gen_lanenet_geo_model.tar'
+Init weights in network with [normal]
+#reused param: 357
+=> loading checkpoint '/kaggle/input/3d-gen-lanenet-pre/pretrained/gen_lanenet_geo_model.tar'
